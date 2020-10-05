@@ -1,0 +1,7 @@
+torchvision
+imutils
+detecto
+opencv-python
+scikit-image
+requests
+numpy
