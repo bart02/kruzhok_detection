@@ -1,27 +1,29 @@
-# kruzhok_detection
+# Kruzhok detection with Faster R-CNN + SVM HOG Classification
 KD logo detection for KRUZHOK.PRO selection
 
-## Data augmentation
-To train the network better on a small dataset, you can use data augmentation, a technique for modifying the images in the training set and adding them to the set. Thus, the network will receive more different examples for training and, accordingly, will show better results.
+
+## Abstract
+We use a 2-level model for detecting potential logos + classification for increasing quality 
+Dataset for detector was compiled using images from social networks, open datasets with logos
+Dataset for svm-classifier was generated from detector's predictions on previous dataset + open datasets for balancing classes
+We used trransfer learning for R-CNN (ResNet-50) 
+
+## Usage
+
+```
+usage: run.py [-h] [-d DIRPATH] [-f FILEPATH]
+
+optional arguments:
+  -h, --help   show this help message and exit
+  -d DIRPATH   path to directory with images
+  -f FILEPATH  path to image
+```
 
 
-Data_Augmentation.ipynb can help you with it. It can:
-- make a lot of modified images
-- randomly rotate images
-- randomly shift images horizontally and vertically
-- randomly zoom images
-- randomly invert colors in images
+## Requirements
+For cpu:
+`pip install -r cpu_requirements.txt`
 
-
-To augment your images you need:
-1. Replace images in Dataset/Dataset with yours
-2. Open Data_Augmentation.ipynb
-3. Tune size and number of augmented images (optionally you can tune augmentation parameters, for example, zoom, shift or rotation)
-4. Run all code in file
-5. Finally, you will see augmented dataset in directory "AugmentedDataset" in same directory with script
-
-
-It uses:
-- Python
-- TensorFlow library
-- os library
+For gpu:
+1) Install latest gpu drivers + CUDA for torch
+2) `pip install -r gpu_requirements.txt`
