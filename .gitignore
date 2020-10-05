@@ -1,5 +1,10 @@
 .idea
 
+*.joblib
+*.pth
+
+update_list.txt
+
 # CMake
 cmake-build-debug/
 
@@ -138,5 +143,3 @@ ENV/
 # End of https://www.gitignore.io/api/python,pycharm
 
 *.json
-*.jpg
-*.png
