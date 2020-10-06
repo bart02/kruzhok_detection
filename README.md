@@ -4,9 +4,9 @@ Team: Mudreci
 
 ## Abstract
 We use a 2-level model for detecting potential logos + classification for increasing quality.  
-Dataset for detector was compiled using images from social networks (we labeled them using LabelImg) and open datasets with logos.  
+Dataset for detector was compiled using augmented images from social networks (we labeled them using LabelImg) and open datasets with logos.  
 Dataset for svm-classifier was generated from detector's predictions on previous dataset + open datasets for balancing classes.  
-We used trransfer learning for R-CNN (ResNet-50).  
+We used transfer learning for R-CNN (ResNet-50).  
 Dataset: https://drive.google.com/drive/folders/1AkkbzrETito3GuVp52L6hyAzLv_tiHP2?usp=sharing
 
 ## Usage
